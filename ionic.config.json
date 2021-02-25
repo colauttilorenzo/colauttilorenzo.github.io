@@ -1,0 +1,7 @@
+{
+  "name": "cloud.jslab.app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
