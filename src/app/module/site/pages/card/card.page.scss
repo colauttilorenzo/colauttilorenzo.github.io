@@ -4,8 +4,15 @@ div * {
     cursor: default;
 }
 
-a, a * {
+a,
+a * {
     color: $color-secondary;
+}
+
+a,
+a *,
+button,
+button * {
     cursor: pointer !important;
 }
 
@@ -53,7 +60,7 @@ a, a * {
     -o-transition: content .6s ease-out;
 }
 
-.icon:hover {
+.icon-hover:hover .icon {
     transition: content .6s ease-in;
     -moz-transition: content .6s ease-in;
     -webkit-transition: content .6s ease-in;
@@ -68,7 +75,7 @@ a, a * {
     content: '\f0e0';
 }
 
-.icon.icon-envelope:hover::before {
+.icon-hover:hover .icon.icon-envelope::before {
     content: '\f2b6';
 }
 
@@ -76,7 +83,7 @@ a, a * {
     content: '\f09b';
 }
 
-.icon.icon-github:hover::before {
+.icon-hover:hover .icon.icon-github::before {
     content: '\f113';
 }
 
@@ -84,8 +91,17 @@ a, a * {
     content: '\f0e1';
 }
 
-.icon.icon-linkedin:hover::before {
+.icon-hover:hover .icon.icon-linkedin::before {
     content: '\f08c';
+}
+
+.icon.icon-bookmark::before {
+    content: '\f02e';
+    font-weight: 200;
+}
+
+.icon-hover:hover .icon.icon-bookmark::before {
+    font-weight: 900;
 }
 
 .card {
@@ -121,7 +137,17 @@ a, a * {
         -webkit-transition: none;
         -o-transition: none;
     }
-  }
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+}
+
+.has-tooltip:hover .tooltip {
+    visibility: visible;
+    z-index: 100;
+}
 
 .my-picture {
     width: 200px;

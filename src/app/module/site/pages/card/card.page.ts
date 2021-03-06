@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardPage implements OnInit {
 
-  constructor() {
+  public is_info_open: boolean;
 
+  constructor() {
+    this.is_info_open = false;
   }
 
   ngOnInit() {
@@ -25,6 +27,11 @@ export class CardPage implements OnInit {
       xhr.responseType = 'blob';
       xhr.send();
     }
+  }
+
+  public info_open_and_close(is_open: boolean|undefined = undefined): void {
+    is_open = (is_open === undefined ? !this.is_info_open : is_open);
+    this.is_info_open = is_open;
   }
 
 }
