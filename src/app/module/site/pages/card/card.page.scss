@@ -1,7 +1,12 @@
 @import '../../../../../theme/variables.scss';
 
-a {
+div * {
+    cursor: default;
+}
+
+a, a * {
     color: $color-secondary;
+    cursor: pointer !important;
 }
 
 .title {
