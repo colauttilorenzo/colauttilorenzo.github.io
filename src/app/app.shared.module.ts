@@ -13,6 +13,12 @@ import { LayoutComponent } from './component/layout/layout.component';
 // --------------- components ---------------
 
 
+// ---------------- services ----------------
+import { ApplicationService } from './service/application-service';
+import { StorageService } from './service/storage-service';
+// ---------------- services ----------------
+
+
 @NgModule({
   imports: [
     FormsModule,
@@ -33,6 +39,8 @@ import { LayoutComponent } from './component/layout/layout.component';
     LayoutComponent
   ],
   providers: [
+    ApplicationService,
+    StorageService,
     {
       provide: RouteReuseStrategy,
       useClass: IonicRouteStrategy
