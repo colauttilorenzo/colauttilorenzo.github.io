@@ -1,0 +1,10 @@
+@import '../../../../../theme/variables.scss';
+
+.header-md::after {
+    background-position: initial;
+    background-image: initial;
+    background-repeat: initial;
+
+    box-shadow: 0 2px 8px 1px rgb(64 60 67 / 24%);
+    border-color: rgba(223, 225, 229, 0);
+}

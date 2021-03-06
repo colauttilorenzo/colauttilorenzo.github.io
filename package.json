@@ -4,9 +4,13 @@
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "serve:ios": "ionic cap run ios -l --external",
+    "serve:android": "ionic cap run android -l --external",
+    "serve:www": "ng serve",
+    "build:ios": "ionic cap build ios",
+    "build:android": "ionic cap build android",
+    "build:www": "ng build",
+    "build": "ng build && ionic build && ionic copy && ionic cap build ios  && ionic cap build android",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -19,8 +23,13 @@
     "@angular/platform-browser": "~11.2.0",
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
+    "@capacitor/android": "^2.4.6",
     "@capacitor/core": "2.4.6",
+    "@capacitor/ios": "^2.4.6",
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "@ionic/angular": "^5.5.2",
+    "@ionic/pwa-elements": "^3.0.2",
+    "qartjs": "^1.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -46,6 +55,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
+    "tailwind-sass": "^1.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
