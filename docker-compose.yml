@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  web:
+    build:
+        context: ./
+        args:
+          APPLICATION_WORKING_PATH: ${APPLICATION_WORKING_PATH}
+    ports:
+      - "${APPLICATION_EXPOSE_PORT}:8080"
