@@ -1,2 +1,9 @@
-node_modules
-npm-debug.log
+.git
+.gitignore
+.firebase
+.editorconfig
+/node_modules
+/e2e
+/docs
+*.zip
+*.md
