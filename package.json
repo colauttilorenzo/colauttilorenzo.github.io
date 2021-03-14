@@ -16,6 +16,7 @@
     "e2e": "ng e2e",
     "start": "node server.js",
     "dev": "ng serve",
+    "deploy": "docker-compose build && docker-compose up -d",
     "heroku-postbuild": "ng build"
   },
   "private": true,
